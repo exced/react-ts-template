@@ -1,0 +1,26 @@
+{
+  "verbose": true,
+  "roots": ["<rootDir>/src"],
+  "testPathIgnorePatterns": [],
+  "transform": {
+    "^.+\\.(j|t)sx?$": "ts-jest"
+  },
+  "reporters": [
+    "default",
+    [
+      "./node_modules/jest-html-reporter",
+      {
+        "pageTitle": "Test Report",
+        "outputPath": "./reports/test-results/index.html"
+      }
+    ]
+  ],
+  "setupFiles": [],
+  "testEnvironment": "jsdom",
+  "globals": {
+    "window": {}
+  },
+  "coverageDirectory": "reports/coverage",
+  "collectCoverageFrom": ["**/*.{js,ts,tsx}", "!**/node_modules/**", "!**/types/**"],
+  "coverageThreshold": {}
+}
